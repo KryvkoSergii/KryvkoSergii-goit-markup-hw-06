@@ -166,6 +166,11 @@ nav {
     flex-wrap: wrap;
 }
 
+header .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
 .logo span {
     color: var(--logo-text-color-dark);
 }
@@ -473,6 +478,7 @@ address {
     line-height: 40px;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+    padding-bottom: 40px;
 }
 
 .benefits .item {
@@ -634,7 +640,7 @@ footer {
     line-height: 24px;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -665,7 +671,7 @@ footer {
 }
 
 .social-main {
-    margin-top: 8px;
+    margin-top: 48px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -860,14 +866,16 @@ footer {
         0px 1px 3px 0px rgba(0, 0, 0, 0.12),
         0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     background-color: transparent;
+    border: var(--header-border) solid 2px;
+    outline: none;
 }
 
 .modal-button svg {
-    fill: var(--logo-text-color-light);
+    fill: var(--client-logo);
 }
 
-button.modal-button:hover,
-button.modal-button:focus {
+.modal-button:hover,
+.modal-button:focus {
     display: flex;
     padding: 5px;
     border-radius: 50%;
@@ -877,8 +885,8 @@ button.modal-button:focus {
     background-color: var(--on-hover);
 }
 
-button.modal-button:hover>svg,
-button.modal-button:focus>svg {
+.modal-button:hover>svg,
+.modal-button:focus>svg {
     fill: var(--header-border);
 }
 
@@ -1035,6 +1043,9 @@ input[type='checkbox']+.review-form-agreement-desc>.review-form-checkbox {
     margin-right: 12px;
     border-radius: 4px;
 
+    fill: var(--header-background);
+    background-color: var(--on-hover);
+
     border: 1px solid var(--logo-text-color-dark);
     cursor: pointer;
     transition: var(--transformation);
@@ -1114,16 +1125,13 @@ input[type='checkbox']:checked+.review-form-agreement-desc>.review-form-checkbox
 .footer-form button {
     display: flex;
     flex-direction: row;
-    margin-top: 16px;
     width: 165px;
     gap: 16px;
     background-color: var(--logo-text-color-prefix);
     color: var(--logo-text-color-light);
-    height: 40px;
+
     justify-content: center;
-    align-items: center;
     align-content: center;
-    transform: translateY(100%);
     border: transparent;
 }
 
@@ -1193,8 +1201,6 @@ input[type='checkbox']:checked+.review-form-agreement-desc>.review-form-checkbox
         max-width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
-        padding-top: 16px;
-        padding-bottom: 16px;
     }
 }
 
@@ -1224,8 +1230,8 @@ header .container nav {
 }
 
 .menu-toggle {
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 24px;
+    min-width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1234,7 +1240,6 @@ header .container nav {
     padding: 0;
     background-color: transparent;
     cursor: pointer;
-    border: none;
     border-radius: 50%;
     outline: none;
 }
@@ -1300,7 +1305,7 @@ header .container nav {
 
 .mobile-menu .link {
     display: block;
-    padding: 10px;
+    padding: 20px 10px;
     text-decoration: none;
     color: var(--logo-text-color-dark, #2E2F42);
     font-family: var(--primary-font);
@@ -1320,10 +1325,8 @@ header .container nav {
     fill: var(--logo-text-color-dark);
 }
 
-
 @media screen and (min-width: 768px) {
     .container {
-
         max-width: 768px;
     }
 
@@ -1332,7 +1335,6 @@ header .container nav {
     }
 
     h3 {
-        /*font-family: var(--primary-font);*/
         font-weight: 500;
         font-size: 20px;
         line-height: 120%;
@@ -1390,8 +1392,8 @@ header .container nav {
         font-style: normal;
         cursor: pointer;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
+        font-size: 12px;
+        line-height: 14px;
         display: flex;
         letter-spacing: 0.02em;
         color: var(--primary-font-color);
@@ -1420,8 +1422,8 @@ header .container nav {
         font-style: normal;
         cursor: pointer;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
+        font-size: 12px;
+        line-height: 14px;
         display: flex;
         letter-spacing: 0.02em;
         color: var(--primary-font-color);
@@ -1480,7 +1482,7 @@ header .container nav {
         display: flex;
         letter-spacing: 0.02em;
         color: var(--primary-font-color);
-        gap: 12px;
+        column-gap: 48px;
         margin: 0;
         padding: 0;
         flex-direction: column;
@@ -1498,10 +1500,12 @@ header .container nav {
         align-items: self-start;
         flex-wrap: wrap;
         justify-content: left;
+        column-gap: 24px;
     }
 
     .footer-form {
         flex-direction: row;
+        align-items: end;
     }
 
     .footer-email {
@@ -1510,9 +1514,10 @@ header .container nav {
 
     .footer-form button {
         width: 165px;
+        margin-bottom: 10px;
     }
 
-    .footer-wrapper {
+    footer .container {
         width: 584px;
         margin: 0 auto;
     }
@@ -1572,7 +1577,7 @@ header .container nav {
 
 @media screen and (min-width: 1158px) {
     .container {
-        max-width: 1128px;
+        max-width: 1158px;
     }
 
     nav .logo {
@@ -1580,7 +1585,6 @@ header .container nav {
     }
 
     .team-list .card {
-        margin-right: 24px;
         width: calc((100%) / 4);
     }
 
@@ -1674,6 +1678,11 @@ header .container nav {
 
     }
 
+    footer .container {
+        width: 1158px;
+        margin: 0 auto;
+    }
+
     .modal {
         position: absolute;
         top: 50%;
@@ -1693,13 +1702,18 @@ header .container nav {
 
     .benefits {
         display: flex;
-    }
-
-    .benefits {
-        display: flex;
+        gap: 24px;
     }
 
     .team-list {
         gap: 24px;
+    }
+
+    .social-footer{
+        margin-right: 80px;
+    }
+
+    .footer-logo{
+        margin-right: 120px;
     }
 }

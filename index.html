@@ -112,9 +112,18 @@
             <div class="container">
                 <h2 class="benefits-h2">What are we doing</h2>
                 <ul class="benefits">
-                    <li class="item"><img src="images/pc.jpg" height="300" width="360" alt="wearedoing1"></li>
-                    <li class="item"><img src="images/phone.jpg" height="300" width="360" alt="wearedoing2"></li>
-                    <li class="item"><img src="images/general.jpg" height="300" width="360" alt="wearedoing3"></li>
+                    <li class="item"><img src="images/pc.jpg" 
+                        srcset="images/pc.jpg  1x images/pc-2x.jpg  2x" 
+                        height="300" width="360" 
+                        alt="wearedoing1"></li>
+                    <li class="item"><img src="images/phone.jpg" 
+                        srcset="images/phone.jpg  1x images/phone-2x.jpg  2x" 
+                        height="300" width="360" 
+                        alt="wearedoing2"></li>
+                    <li class="item"><img src="images/general.jpg" 
+                        srcset="images/general.jpg  1x images/general-2x.jpg  2x" 
+                        height="300" width="360" 
+                        alt="wearedoing3"></li>
                 </ul>
             </div>
         </section>
@@ -331,7 +340,7 @@
     <footer class="">
         <div class="container">
             <div class="footer-wrapper">
-                <div>
+                <div class="footer-logo">
                     <a href="./index.html" class="logo">WEB<span>STUDIO</span></a>
                     <p class="footer-p">Increase the flow of customers and sales for your business with digital
                         marketing &
@@ -374,11 +383,11 @@
                 <div style="display: flex;flex-direction: row">
                     <form class="footer-form" name="subscription">
                         <div class="field-wrapper footer-email">
-                            <label for="f_email">Subscribe
-                                <input type="email" name="f_email" class="form-group" required placeholder="Email">
+                            <label for="email">Subscribe
+                                <input type="email" name="email" class="form-group" required placeholder="Email">
                             </label>
                         </div>
-                        <button class="btn btn-accent " type="submit">
+                        <button class="subscribe-btn" type="submit">
                             <span>Subscribe</span>
                             <svg class="modal-btn-icon" width="24" height="24">
                                 <use href="./images/icons.svg#telegram"></use>
@@ -391,8 +400,8 @@
     </footer>
 
     <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="modal-btn menu-toggle js-close-menu" type="button" is-open>
-            <svg class="modal-btn-icon" width="10" height="10">
+        <button class="modal-button menu-toggle js-close-menu" type="button" is-open>
+            <svg class="modal-button-icon" width="8" height="8">
                 <use href="./images/icons.svg#close"></use>
             </svg>
         </button>
@@ -438,13 +447,12 @@
                     </ul>
                 </li>
             </ul>
-
         </div>
     </div>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-button" type="button" data-modal-close>
-                <svg class="modal-button-icon" width="10" height="10">
+                <svg class="modal-button-icon" width="8" height="8">
                     <use href="./images/icons.svg#close"></use>
                 </svg>
             </button>
